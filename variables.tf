@@ -1,6 +1,6 @@
-variable "iothub_shared_access_policys" {
+variable "iothub_shared_access_policies" {
   description = <<EOT
-Map of iothub_shared_access_policys, attributes below
+Map of iothub_shared_access_policies, attributes below
 Required:
     - iothub_name
     - name
@@ -16,10 +16,10 @@ EOT
     iothub_name         = string
     name                = string
     resource_group_name = string
-    device_connect      = optional(bool, false)
-    registry_read       = optional(bool, false)
-    registry_write      = optional(bool, false)
-    service_connect     = optional(bool, false)
+    device_connect      = optional(bool) # Default: false
+    registry_read       = optional(bool) # Default: false
+    registry_write      = optional(bool) # Default: false
+    service_connect     = optional(bool) # Default: false
   }))
 }
 
