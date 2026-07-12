@@ -1,3 +1,7 @@
+output "iothub_shared_access_policies_id" {
+  description = "Map of id values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.id }
+}
 output "iothub_shared_access_policies_device_connect" {
   description = "Map of device_connect values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
   value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.device_connect }
