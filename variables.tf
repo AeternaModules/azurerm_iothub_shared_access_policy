@@ -16,10 +16,10 @@ EOT
     iothub_name         = string
     name                = string
     resource_group_name = string
-    device_connect      = optional(bool) # Default: false
-    registry_read       = optional(bool) # Default: false
-    registry_write      = optional(bool) # Default: false
-    service_connect     = optional(bool) # Default: false
+    device_connect      = optional(bool)
+    registry_read       = optional(bool)
+    registry_write      = optional(bool)
+    service_connect     = optional(bool)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_iothub_shared_access_policy's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,
