@@ -1,53 +1,53 @@
 output "iothub_shared_access_policies_id" {
   description = "Map of id values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.id }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.id if v.id != null && length(v.id) > 0 }
 }
 output "iothub_shared_access_policies_device_connect" {
   description = "Map of device_connect values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.device_connect }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.device_connect if v.device_connect != null }
 }
 output "iothub_shared_access_policies_iothub_name" {
   description = "Map of iothub_name values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.iothub_name }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.iothub_name if v.iothub_name != null && length(v.iothub_name) > 0 }
 }
 output "iothub_shared_access_policies_name" {
   description = "Map of name values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.name }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.name if v.name != null && length(v.name) > 0 }
 }
 output "iothub_shared_access_policies_primary_connection_string" {
   description = "Map of primary_connection_string values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.primary_connection_string }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.primary_connection_string if v.primary_connection_string != null && length(v.primary_connection_string) > 0 }
   sensitive   = true
 }
 output "iothub_shared_access_policies_primary_key" {
   description = "Map of primary_key values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.primary_key }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.primary_key if v.primary_key != null && length(v.primary_key) > 0 }
   sensitive   = true
 }
 output "iothub_shared_access_policies_registry_read" {
   description = "Map of registry_read values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.registry_read }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.registry_read if v.registry_read != null }
 }
 output "iothub_shared_access_policies_registry_write" {
   description = "Map of registry_write values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.registry_write }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.registry_write if v.registry_write != null }
 }
 output "iothub_shared_access_policies_resource_group_name" {
   description = "Map of resource_group_name values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.resource_group_name }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.resource_group_name if v.resource_group_name != null && length(v.resource_group_name) > 0 }
 }
 output "iothub_shared_access_policies_secondary_connection_string" {
   description = "Map of secondary_connection_string values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.secondary_connection_string }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.secondary_connection_string if v.secondary_connection_string != null && length(v.secondary_connection_string) > 0 }
   sensitive   = true
 }
 output "iothub_shared_access_policies_secondary_key" {
   description = "Map of secondary_key values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.secondary_key }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.secondary_key if v.secondary_key != null && length(v.secondary_key) > 0 }
   sensitive   = true
 }
 output "iothub_shared_access_policies_service_connect" {
   description = "Map of service_connect values across all iothub_shared_access_policies, keyed the same as var.iothub_shared_access_policies"
-  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.service_connect }
+  value       = { for k, v in azurerm_iothub_shared_access_policy.iothub_shared_access_policies : k => v.service_connect if v.service_connect != null }
 }
 
